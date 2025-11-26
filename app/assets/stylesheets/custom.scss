@@ -1,0 +1,97 @@
+/* Import the rest of our custom scss files */
+@import "forms";
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+html,body
+{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+body {
+  padding-top: 60px;
+  background-color: #eee;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+.pageContent {
+  background-color: white;
+  padding-bottom: 20px;
+}
+
+.pageHeader {
+  margin: 20px 0 20px 20px;
+  padding: 10px 5px 10px 5px;
+}
+
+.userEmail {
+  margin: -35px 0 35px 90px;
+}
+
+.main-sign-in {
+  text-align: center;
+  color: blue;
+}
+
+.home-main-text {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* Remove simple form checks and exes on validations */
+.was-validated .custom-select:valid {
+  background-image: none;
+}
+
+/* Global site styling */
+.appStateBtn {
+  margin: 5px 2.5px 5px 2.5px;
+}
+
+ /* miscellaneous */
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}

@@ -1,0 +1,22 @@
+<% provide(:title, 'Sign up') %>
+<div class="container pageContent">
+  <h1 class="pageHeader">Sign up</h1>
+  <div class="col-sm-8">
+    <%= simple_form_for @user,
+          url: registrations_url,
+          wrapper: :horizontal_form,
+          wrapper_mappings: {
+          check_boxes: :horizontal_collection,
+          radio_buttons: :horizontal_collection,
+          file: :horizontal_file,
+          boolean: :horizontal_boolean
+    } do |f| %>
+      <%= f.input :name, placeholder: 'Name', required: true, autofocus: true %>
+      <%= f.input :email_address, placeholder: 'Email', required: true %>
+      <%= f.input :password, placeholder: 'Password' %>
+      <%= f.input :password_confirmation, placeholder: 'Password confirm' %>
+
+      <%= f.button :submit, 'Create my account', class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

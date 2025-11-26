@@ -1,0 +1,13 @@
+<tr>
+  <td>
+    <%= link_to @user.name, @user %>
+  </td>
+  <td>
+    <h5> @user.email_address, @user </h5>
+  </td>
+  <td>
+    <%= link_to "[delete]", @user, method: :delete,
+        data: { confirm: "Are you sure?" },
+        :title => "Delete #{@user.name}" %>
+  </td>
+</tr>

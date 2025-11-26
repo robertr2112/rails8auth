@@ -1,0 +1,11 @@
+<% provide(:title, @user.name) %>
+
+<div class="container pageContent">
+
+  <% if @user.present? %>
+    <h1 class="pageHeader">
+      <%= @user.name %>
+    </h1>
+    <h5 class="userEmail">(<%= @user.email_address %>) </h5>
+  <% end %>
+</div>

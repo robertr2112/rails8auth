@@ -1,0 +1,39 @@
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Test bootstrap is working
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" 
+      aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>This is a test that shows bootstrap is working! </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main home page code -->
+  <div class="center col-sm-8 col-md-12">
+    <h1>Welcome to Rails 8 with Authentication </h1>
+    <p>
+      This is a simple Rails 8 app that shows the basics of the new authentication system, including
+      a basic sign up page.
+    </p>
+    <% if authenticated? %>
+      <%= link_to 'Profile', user_path(Current.user) %>
+      <%= link_to 'Sign out', session_path, data: { turbo_method: :delete } %>
+    <% else %>
+      <%= link_to "Sign up now!", new_registrations_path %>
+      <small class=main-sign-in>Already a member? <%= link_to "[Sign in]", new_session_path%></small>
+	<% end %>
+  </div>
+</div>
